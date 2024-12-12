@@ -23,13 +23,13 @@ especieCiudadano.get("/api/especieCiudadano/listarEspecies", (req, res) => {
     if (error) {
       res.send({
         status: "Error",
-        message: "Ocurrio un error en la consulta",
+        message: "¡Error en la consulta!",
         error: error
       });
     } else {
       res.send({
         status: "Ok",
-        message: "¡Consulta Exitosa !",
+        message: "¡Consulta Exitosa!",
         especie: especie
       });
     }
@@ -42,13 +42,13 @@ especieCiudadano.get("/api/especieCiudadano/listarPorId/:id", (req, res) => {
     if (error) {
       res.send({
         status: "Error",
-        message: "Ocurrio un error en la consulta",
+        message: "¡Error en la consulta!",
         error: error
       });
     } else {
       res.send({
         status: "Ok",
-        message: "¡Consulta Exitosa !",
+        message: "¡Consulta Exitosa!",
         especie: especie
       });
     }
@@ -63,13 +63,13 @@ especieCiudadano.post("/api/especieCiudadano/crearEspecie", (req, res) => {
     if (error) {
       res.send({
         status: "Error",
-        message: "Ocurrio un error en la consulta",
+        message: "¡Error en la consulta!",
         error: error
       });
     } else {
       res.send({
         status: "Ok",
-        message: "¡Consulta Exitosa !",
+        message: "¡Consulta Exitosa!",
         especie: especie
       });
     }
@@ -82,13 +82,13 @@ especieCiudadano.delete("/api/especieCiudadano/borrarPorId/:id", (req, res) => {
     if (error) {
       res.send({
         Status: "Error",
-        Mensaje: "Ocurrio un error en la consulta !",
+        Mensaje: "¡Error en la consulta!",
         error: error
       });
     } else {
       res.send({
         Status: "Ok",
-        Mensaje: "Registro borrado con exito !",
+        Mensaje: "¡Registro borrado!",
         especie: especie
       });
     }
@@ -104,13 +104,13 @@ especieCiudadano.put("/api/especieCiudadano/editarEspeciePorId/:id", (req, res) 
     if (error) {
       res.send({
         status: "Error",
-        message: "Ocurrio un error en la consulta",
+        message: "¡Error en la consulta!",
         error: error
       });
     } else {
       res.send({
         status: "Ok",
-        message: "¡Consulta Exitosa !",
+        message: "¡Consulta Exitosa!",
         especie: especie
       });
     }

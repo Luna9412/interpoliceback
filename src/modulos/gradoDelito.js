@@ -23,13 +23,13 @@ grado.get("/api/grado/listarGrados", (req, res) => {
     if (error) {
       res.send({
         status: "Error",
-        message: "Ocurrio un error en la consulta",
+        message: "¡Error en la consulta!",
         error: error
       });
     } else {
       res.send({
         status: "Ok",
-        message: "¡Consulta Exitosa !",
+        message: "¡Consulta Exitosa!",
         grados: grados
       });
     }
@@ -42,13 +42,13 @@ grado.get("/api/grado/listarPorId/:id", (req, res) => {
     if (error) {
       res.send({
         status: "Error",
-        message: "Ocurrio un error en la consulta",
+        message: "¡Error en la consulta!",
         error: error
       });
     } else {
       res.send({
         status: "Ok",
-        message: "¡Consulta Exitosa !",
+        message: "¡Consulta Exitosa!",
         grados: grados
       });
     }
@@ -63,13 +63,13 @@ grado.post("/api/grado/crearGrado", (req, res) => {
     if (error) {
       res.send({
         status: "Error",
-        message: "Ocurrio un error en la consulta",
+        message: "¡Error en la consulta!",
         error: error
       });
     } else {
       res.send({
         status: "Ok",
-        message: "¡Consulta Exitosa !",
+        message: "¡Consulta Exitosa!",
         grados: grados
       });
     }
@@ -82,13 +82,13 @@ grado.delete("/api/grado/borrarPorId/:id", (req, res) => {
     if (error) {
       res.send({
         Status: "Error",
-        Mensaje: "Ocurrio un error en la consulta !",
+        Mensaje: "¡Error en la consulta!",
         error: error
       });
     } else {
       res.send({
         Status: "Ok",
-        Mensaje: "Registro borrado con exito !",
+        Mensaje: "¡Registro borrado!",
         grados: grados
       });
     }
@@ -104,13 +104,13 @@ grado.put("/api/grado/editarRolPorId/:id", (req, res) => {
     if (error) {
       res.send({
         status: "Error",
-        message: "Ocurrio un error en la consulta",
+        message: "¡Error en la consulta!",
         error: error
       });
     } else {
       res.send({
         status: "Ok",
-        message: "¡Consulta Exitosa !",
+        message: "¡Consulta Exitosa!",
         grados: grados
       });
     }

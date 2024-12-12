@@ -14,13 +14,13 @@ historial.get("/api/historial/historialCityzen/:id", (req, res) => {
     if (error) {
       res.send({
         status: "Error",
-        message: "Ocurrio un error en la consulta",
+        message: "¡Error en la consulta!",
         error: error
       });
     } else {
       res.send({
         status: "Ok",
-        message: "¡Consulta Exitosa !",
+        message: "¡Consulta Exitosa!",
         historiales: historiales
       });
     }

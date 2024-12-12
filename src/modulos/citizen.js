@@ -24,13 +24,13 @@ cityzen.get("/api/cityzen/listarPorId/:id", (req, res) => {
     if (error) {
       res.send({
         status: "Error",
-        message: "Ocurrio un error en la consulta",
+        message: "¡Error en la consulta!",
         error: error
       });
     } else {
       res.send({
         status: "Ok",
-        message: "¡Consulta Exitosa !",
+        message: "¡Consulta Exitosa!",
         cityzen: cityzen
       });
     }
@@ -51,14 +51,14 @@ cityzen.post("/api/cityzen/crearCiudadano", (req, res) => {
     if (error) {
       res.send({
         status: "Error",
-        message: "Ocurrio un error en la consulta",
+        message: "¡Error en la consulta!",
         error: error
       });
       console.log(error);
     } else {
       res.send({
         status: "Ok",
-        message: "¡Consulta Exitosa !",
+        message: "¡Consulta Exitosa!",
         cityzen: cityzen
       });
     }
@@ -71,13 +71,13 @@ cityzen.delete("/api/cityzen/borrarPorId/:id", (req, res) => {
     if (error) {
       res.send({
         Status: "Error",
-        Mensaje: "Ocurrio un error en la consulta !",
+        Mensaje: "¡Error en la consulta!",
         error: error
       });
     } else {
       res.send({
         Status: "Ok",
-        Mensaje: "Registro borrado con exito !",
+        Mensaje: "¡Registro borrado!",
         cityzen: cityzen
       });
     }
@@ -99,13 +99,13 @@ cityzen.put("/api/cityzen/editarPorId/:id", (req, res) => {
     if (error) {
       res.send({
         status: "Error",
-        message: "Ocurrio un error en la consulta",
+        message: "¡Error en la consulta!",
         error: error
       });
     } else {
       res.send({
         status: "Ok",
-        message: "¡Consulta Exitosa !",
+        message: "¡Consulta Exitosa!",
         cityzen: cityzen
       });
     }

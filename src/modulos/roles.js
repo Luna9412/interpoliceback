@@ -23,13 +23,13 @@ roles.get("/api/roles/listarRoles", (req, res) => {
     if (error) {
       res.send({
         status: "Error",
-        message: "Ocurrio un error en la consulta",
+        message: "¡Error en la consulta!",
         error: error
       });
     } else {
       res.send({
         status: "Ok",
-        message: "¡Consulta Exitosa !",
+        message: "¡Consulta Exitosa!",
         roles: roles
       });
     }
@@ -42,13 +42,13 @@ roles.get("/api/roles/listarPorId/:id", (req, res) => {
     if (error) {
       res.send({
         status: "Error",
-        message: "Ocurrio un error en la consulta",
+        message: "¡Error en la consulta!",
         error: error
       });
     } else {
       res.send({
         status: "Ok",
-        message: "¡Consulta Exitosa !",
+        message: "¡Consulta Exitosa!",
         roles: roles
       });
     }
@@ -63,13 +63,13 @@ roles.post("/api/roles/crearRol", (req, res) => {
     if (error) {
       res.send({
         status: "Error",
-        message: "Ocurrio un error en la consulta",
+        message: "¡Error en la consulta!",
         error: error
       });
     } else {
       res.send({
         status: "Ok",
-        message: "¡Consulta Exitosa !",
+        message: "¡Consulta Exitosa!",
         roles: roles
       });
     }
@@ -82,13 +82,13 @@ roles.delete("/api/roles/borrarPorId/:id", (req, res) => {
     if (error) {
       res.send({
         Status: "Error",
-        Mensaje: "Ocurrio un error en la consulta !",
+        Mensaje: "¡Error en la consulta!",
         error: error
       });
     } else {
       res.send({
         Status: "Ok",
-        Mensaje: "Registro borrado con exito !",
+        Mensaje: "¡Registro borrado!",
         respuesta: respuesta
       });
     }
@@ -104,13 +104,13 @@ roles.put("/api/roles/editarRolPorId/:id", (req, res) => {
     if (error) {
       res.send({
         status: "Error",
-        message: "Ocurrio un error en la consulta",
+        message: "¡Error en la consulta!",
         error: error
       });
     } else {
       res.send({
         status: "Ok",
-        message: "¡Consulta Exitosa !",
+        message: "¡Consulta Exitosa!",
         respuesta: respuesta
       });
     }
