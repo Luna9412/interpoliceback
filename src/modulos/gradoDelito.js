@@ -94,7 +94,7 @@ grado.delete("/api/grado/borrarPorId/:id", (req, res) => {
     }
   });
 });
-grado.put("/api/grado/editarRolPorId/:id", (req, res) => {
+grado.put("/api/grado/editarGradoPorId/:id", (req, res) => {
   let id = req.params.id;
   let formDatosDeGrado = {
     grado: req.body.gradoDelito
