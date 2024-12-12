@@ -2,16 +2,17 @@ const express = require("express");
 const cors = require("cors");
 require("dotenv").config();
 const app = express();
-const PORT = process.env.PORT || 4100; // CONFIGURACION DE PUERTOS
+const { config } = require("dotenv");
 app.use(cors());
 app.use(express.json());
-app.use("/", require("./src/modulos/usuario.js")); //LIBRERIA USUARIOS
-app.use("/", require("./src/modulos/citizen.js")); //LIBRERIA CITIZEN
-app.use("/", require("./src/modulos/especie.js")); //LIBRERIA ESPECIES
-app.use("/", require("./src/modulos/roles.js")); //LIBRERIA ROLES
-app.use("/", require("./src/modulos/delitos.js")); //LIBRERIA DELITOS
-app.use("/", require("./src/modulos/historial.js")); //LIBRERIA HISTORIAL DE DELITOS
-app.use("/", require("./src/modulos/gradoDelito.js")); //LIBRERIA GRADOS
+const PORT = process.env.PORT || 4100;
+app.use("/", require("./src/modulos/citizen.js"));
+app.use("/", require("./src/modulos/delitos.js"));
+app.use("/", require("./src/modulos/especie.js"));
+app.use("/", require("./src/modulos/gradoDelito.js"));
+app.use("/", require("./src/modulos/historial.js"));
+app.use("/", require("./src/modulos/roles.js"));
+app.use("/", require("./src/modulos/usuario.js"));
 app.listen(PORT, () => {
   console.log(`Server running in : 4100 `);
 });

@@ -1,14 +1,13 @@
-// ADMINISTRAR USUARIOS
 const express = require("express");
-const bcrypt = require("bcryptjs"); // LIBRERIA BCRYPT PARA ENCRIPTAR LA CONTRASEÑA
-const bd = require("./bd.js"); // CONEXION A LA BD
+const bcrypt = require("bcryptjs");
+const bd = require("./bd.js");
 const usuario = express();
 usuario.get("/api/usuario/listarUsuarios", (req, res) => {
   let limite = parseInt(req.query.limite);
   let pagina = parseInt(req.query.pagina);
   let OFFSET = parseInt((pagina - 1) * limite);
   let consulta2 = "SELECT COUNT(*) AS conteoUsuarios FROM usuarios ";
-  let consulta ="SELECT rol.nombre AS rol,usuarios.idusuarios,usuarios.nombre,usuarios.password FROM usuarios INNER JOIN rol ON usuarios.rol_idrol = rol.idrol LIMIT ? OFFSET ?;";
+  let consulta = "SELECT rol.nombre AS rol,usuarios.idusuarios,usuarios.nombre,usuarios.password FROM usuarios INNER JOIN rol ON usuarios.rol_idrol = rol.idrol LIMIT ? OFFSET ?;";
   bd.query(consulta2, (error, totalUsuarios) => {
     bd.query(consulta, [limite, OFFSET], (error, usuarios) => {
       res.send({
@@ -26,13 +25,13 @@ usuario.get("/api/usuario/listarPorId/:id", (req, res) => {
     if (error) {
       res.send({
         status: "Error",
-        message: "¡Error en la consulta!",
+        message: "Ocurrio un error en la consulta",
         error: error
       });
     } else {
       res.send({
         status: "Ok",
-        message: "¡Consulta Exitosa!",
+        message: "¡Consulta Exitosa !",
         usuarios: usuarios
       });
     }
@@ -49,13 +48,13 @@ usuario.post("/api/usuario/crearUsuario", (req, res) => {
     if (error) {
       res.send({
         status: "Error",
-        message: "¡Error en la consulta!",
+        message: "Ocurrio un error en la consulta",
         error: error
       });
     } else {
       res.send({
         status: "Ok",
-        message: "¡Consulta Exitosa!",
+        message: "¡Consulta Exitosa !",
         usuarios: usuarios
       });
     }
@@ -68,13 +67,13 @@ usuario.delete("/api/usuario/borrarPorId/:id", (req, res) => {
     if (error) {
       res.send({
         Status: "Error",
-        Mensaje: "¡Error en la consulta!",
+        Mensaje: "Ocurrio un error en la consulta !",
         error: error
       });
     } else {
       res.send({
         Status: "Ok",
-        Mensaje: "¡Registro borrado!",
+        Mensaje: "Registro borrado con exito !",
         usuarios: usuarios
       });
     }
@@ -92,13 +91,13 @@ usuario.put("/api/usuario/editarPorId/:id", (req, res) => {
     if (error) {
       res.send({
         status: "Error",
-        message: "¡Error en la consulta!",
+        message: "Ocurrio un error en la consulta",
         error: error
       });
     } else {
       res.send({
         status: "Ok",
-        message: "¡Consulta Exitosa!",
+        message: "¡Consulta Exitosa !",
         usuarios: usuarios
       });
     }

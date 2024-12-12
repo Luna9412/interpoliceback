@@ -1,6 +1,5 @@
-// ADMINISTRAR CIUDADANOS
 const express = require("express");
-const bd = require("./bd.js"); // CONEXION A LA BD
+const bd = require("./bd.js");
 const cityzen = express();
 cityzen.get("/api/cityzen/listarTodos", (req, res) => {
   let limite = parseInt(req.query.limite);
@@ -25,13 +24,13 @@ cityzen.get("/api/cityzen/listarPorId/:id", (req, res) => {
     if (error) {
       res.send({
         status: "Error",
-        message: "¡Error en la consulta!",
+        message: "Ocurrio un error en la consulta",
         error: error
       });
     } else {
       res.send({
         status: "Ok",
-        message: "¡Consulta Exitosa!",
+        message: "¡Consulta Exitosa !",
         cityzen: cityzen
       });
     }
@@ -52,14 +51,14 @@ cityzen.post("/api/cityzen/crearCiudadano", (req, res) => {
     if (error) {
       res.send({
         status: "Error",
-        message: "¡Error en la consulta!",
+        message: "Ocurrio un error en la consulta",
         error: error
       });
       console.log(error);
     } else {
       res.send({
         status: "Ok",
-        message: "¡Consulta Exitosa!",
+        message: "¡Consulta Exitosa !",
         cityzen: cityzen
       });
     }
@@ -72,13 +71,13 @@ cityzen.delete("/api/cityzen/borrarPorId/:id", (req, res) => {
     if (error) {
       res.send({
         Status: "Error",
-        Mensaje: "¡Error en la consulta!",
+        Mensaje: "Ocurrio un error en la consulta !",
         error: error
       });
     } else {
       res.send({
         Status: "Ok",
-        Mensaje: "¡Registro borrado!",
+        Mensaje: "Registro borrado con exito !",
         cityzen: cityzen
       });
     }

@@ -1,4 +1,3 @@
-// ADMINISTRAR  ESPECIES
 const express = require("express");
 const bd = require("./bd.js");
 const especieCiudadano = express();
@@ -24,13 +23,13 @@ especieCiudadano.get("/api/especieCiudadano/listarEspecies", (req, res) => {
     if (error) {
       res.send({
         status: "Error",
-        message: "¡Error en la consulta!",
+        message: "Ocurrio un error en la consulta",
         error: error
       });
     } else {
       res.send({
         status: "Ok",
-        message: "¡Consulta Exitosa!",
+        message: "¡Consulta Exitosa !",
         especie: especie
       });
     }
@@ -43,13 +42,13 @@ especieCiudadano.get("/api/especieCiudadano/listarPorId/:id", (req, res) => {
     if (error) {
       res.send({
         status: "Error",
-        message: "¡Error en la consulta!",
+        message: "Ocurrio un error en la consulta",
         error: error
       });
     } else {
       res.send({
         status: "Ok",
-        message: "¡Consulta Exitosa!",
+        message: "¡Consulta Exitosa !",
         especie: especie
       });
     }
@@ -83,13 +82,13 @@ especieCiudadano.delete("/api/especieCiudadano/borrarPorId/:id", (req, res) => {
     if (error) {
       res.send({
         Status: "Error",
-        Mensaje: "¡Error en la consulta!",
+        Mensaje: "Ocurrio un error en la consulta !",
         error: error
       });
     } else {
       res.send({
         Status: "Ok",
-        Mensaje: "¡Registro borrado!",
+        Mensaje: "Registro borrado con exito !",
         especie: especie
       });
     }
@@ -105,13 +104,13 @@ especieCiudadano.put("/api/especieCiudadano/editarEspeciePorId/:id", (req, res) 
     if (error) {
       res.send({
         status: "Error",
-        message: "¡Error en la consulta!",
+        message: "Ocurrio un error en la consulta",
         error: error
       });
     } else {
       res.send({
         status: "Ok",
-        message: "¡Consulta Exitosa!",
+        message: "¡Consulta Exitosa !",
         especie: especie
       });
     }
